@@ -32,7 +32,7 @@ sed -i "s/%%db_dir%%/${DB_DIR}}/g" /etc/minidlna.conf
 #MEDIA_DIR2="$(bashio::config 'media_dir2')"
 #sed -i "s%XXXmedia_dir2XXX%$MEDIA_DIR2%g" /etc/minidlna.conf
 
-echo "> setting ingress port: [port=$ingress_port]"
+echo "> setting ingress port: [port=${ingress_port}]"
 sed -i "s/%%port%%/${ingress_port}/g" /etc/minidlna.conf
 
 OPTIONS="$(bashio::config 'options')"
