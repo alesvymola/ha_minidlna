@@ -1,0 +1,42 @@
+arch:
+  - aarch64
+  - amd64
+  - armhf
+  - armv7
+  - i386
+name: "HA - MiniDLNA"
+description: "MiniDLNA addon for HomeAssistant"
+version: "0.1.0"
+slug: "minidlna"
+init: false
+url: "https://github.com/KrakenIV/ha_minidlna"
+startup: "services"
+boot: "auto"
+webui: "http://[HOST]:[PORT:9998]"
+ports:
+  "1900/udp": 1900
+ports:
+  "1900/udp": "DLNA protocol port"
+map: 
+  - "config:rw"
+  - "share:rw"
+  - "media:rw"
+  - "ssl:ro"
+privileged: 
+  - "NET_ADMIN"
+devices:
+  - "/dev/net/tun"
+host_network: true
+options:
+  media_dir: "/media/data/media"
+  friendly_name: "HA_MiniDLNA"
+  db_dir: "/media/data/meta"
+  options: "-d"
+schema:
+  media_dir: "str"
+  options: "str"
+stage: "experimental"
+ingress_port: 9998
+ingress: true
+panel_icon: "mdi:dlna"
+panel_title: "MiniDLNA"
