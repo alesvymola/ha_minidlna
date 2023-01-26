@@ -35,6 +35,8 @@ options:
 schema:
   media_dir: "str"
   options: "str"
+  friendly_name: "str"
+  db_dir: "str"
 stage: "experimental"
 ingress_port: 9998
 ingress: true
