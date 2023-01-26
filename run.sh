@@ -24,10 +24,10 @@ do
 done
 
 echo "> setting friendly name: [friendly_name=$FRIENDLY_NAME]"
-sed -i "s/%%friendly_name%%/${FRIENDLY_NAME}}/g" /etc/minidlna.conf
+sed -i "s/%%friendly_name%%/$FRIENDLY_NAME/g" /etc/minidlna.conf
 
 echo "> setting db dir: [db_dir=$DB_DIR]"
-sed -i "s/%%db_dir%%/${DB_DIR}}/g" /etc/minidlna.conf
+sed -i "s/%%db_dir%%/$DB_DIR/g" /etc/minidlna.conf
 
 #MEDIA_DIR2="$(bashio::config 'media_dir2')"
 #sed -i "s%XXXmedia_dir2XXX%$MEDIA_DIR2%g" /etc/minidlna.conf
