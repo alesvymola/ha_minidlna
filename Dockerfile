@@ -8,7 +8,7 @@ ARG BUILD_VERSION
 ARG BUILD_ARCH
 # Add env
 ENV LANG C.UTF-8
-ENV TZ=Asia/Japan
+ENV TZ=Europe/Prague
 
 # Setup base
 # install minidlna

@@ -9,7 +9,7 @@ description: "MiniDLNA addon for HomeAssistant"
 version: "0.1.0"
 slug: "minidlna"
 init: false
-url: "https://github.com/KrakenIV/ha_minidlna"
+url: "https://github.com/alesvymola/ha_minidlna"
 startup: "services"
 boot: "auto"
 webui: "http://[HOST]:[PORT:9998]"
@@ -28,9 +28,9 @@ devices:
   - "/dev/net/tun"
 host_network: true
 options:
-  media_dir: "/media/data/media"
+  media_dir: "/media"
   friendly_name: "HA_MiniDLNA"
-  db_dir: "/media/data/meta"
+  db_dir: "/media/meta"
   options: "-d"
 schema:
   media_dir: "str"
