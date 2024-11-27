@@ -15,8 +15,6 @@ boot: "auto"
 webui: "http://[HOST]:[PORT:9998]"
 ports:
   "1900/udp": 1900
-ports:
-  "1900/udp": "DLNA protocol port"
 map: 
   - "config:rw"
   - "share:rw"
